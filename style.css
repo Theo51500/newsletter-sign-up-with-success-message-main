@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto;
+    background-color: hsl(235, 18%, 26%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* FORM STYLE */
+
+.main-container {
+    background-color: #fff;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 30px;
+    display: none;
+}
+
+.main-container.active {
+    display: flex;
+}
+
+.main-container .left-container {
+    padding: 75px 50px;
+}
+
+.main-container .left-container #title-container {
+    font-weight: 700;
+    color: hsl(234, 29%, 20%);
+    font-size: 3.5rem;
+}
+
+.main-container .left-container p {
+    margin: 30px 0;
+    color: hsl(235, 18%, 26%);
+}
+
+.main-container .left-container ul {
+    list-style: none;
+    margin-bottom: 25px;
+    color: hsl(235, 18%, 26%);
+}
+
+.main-container .left-container ul li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-container .left-container ul img {
+    margin-right: 15px;
+}
+
+.main-container .left-container form {
+    margin-top: 50px;
+}
+
+.main-container .left-container form label {
+    display: block;
+    color: hsl(235, 18%, 26%);
+    font-weight: 700;
+    font-size: 0.7rem;
+    margin-bottom: 7px;
+}
+
+.main-container .left-container form #email {
+    border: 1px solid hsl(231, 7%, 60%);
+    padding: 15px 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.main-container .left-container form #email::placeholder {
+    color: hsl(231, 7%, 60%);
+}
+
+.main-container .left-container form button, .succes-container button {
+    border: none;
+    background-color: hsl(234, 29%, 20%);
+    color: #fff;
+    width: 100%;
+    font-weight: 700;
+    padding: 15px 0;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.main-container .left-container form button:hover, .succes-container button:hover {
+    background-color: hsl(4, 100%, 67%);
+    box-shadow: 0px 13px 15px -3px hsla(4, 100%, 67%, 0.514);
+
+}
+
+
+/* SUCCES MESSAGE STYLE */
+
+.succes-container {
+    background-color: #fff;
+    max-width: 400px;
+    padding: 50px;
+    border-radius: 25px;
+    display: none;
+}
+
+.succes-container.active {
+    display: block;
+}
+
+.succes-container img {
+    width: 50px;
+}
+
+.succes-container h2 {
+    color: hsl(234, 29%, 20%);
+    font-size: 3rem;
+    margin: 20px 0;
+    line-height: 3rem;
+}
+
+.succes-container p {
+    margin: 20px 0;
+    font-size: 0.8rem;
+    color: hsl(234, 29%, 20%);
+}
+
+.succes-container p .email-confirmation {
+    font-weight: 700;
+}
+
+.succes-container button {
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 900px) {
+    .main-container {
+        width: 100%;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        height: 100vh;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .main-container .right-container img {
+        content: url(assets/images/illustration-sign-up-mobile.svg);
+        width: 100%;
+    }
+
+    .main-container .left-container {
+        padding: 50px 40px;
+        height: 100%;
+    }
+
+    .main-container .left-container #title-container {
+        font-size: 2.7rem;
+    }
+    
+    .main-container .left-container p, .main-container .left-container li {
+        font-size: 1.1rem;
+    }
+
+    .succes-container {
+        height: 100vh;
+        max-width: 100%;
+        border-radius: 0;
+        padding: 200px 30px;
+    }
+
+    .succes-container p {
+        font-size: 1.1rem;
+        margin-bottom: 21.5rem;
+    }
+}
